@@ -1,0 +1,253 @@
+/* TABS */
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.tab-content {
+  padding: 4rem 0;
+}
+
+.example-purp {
+  color: red;
+}
+
+/* HEADER CSS */
+
+.brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.site-header {
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid grey;
+}
+
+.site-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 660px) {
+  .site-header__wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 660px) {
+  .nav__wrapper {
+    display: flex;
+  }
+}
+
+@media (max-width: 659px) {
+  .nav__wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    /* z-index: -1; */
+    background-color: grey;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  .nav__wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav__item a {
+  display: block;
+  padding: 1.5rem 1rem;
+}
+
+.nav__toggle {
+  display: none;
+}
+
+@media (max-width: 659px) {
+  .nav__toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+  }
+}
+
+.site-header__end img {
+  width: 30px;
+}
+
+.site-header__start img {
+  width: 60px;
+}
+
+.nav__toggle img {
+  width: 30px;
+}
+
+.nav button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.nav ul li:hover {
+  text-decoration: underline;
+}
+
+/* INFORMATION CSS */
+.tab-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-cont h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.info-cont p {
+  line-height: 2.2rem;
+  text-indent: 3.1rem;
+}
+
+.info-cont img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info-cont-wrap * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RULES CSS */
+
+.rules-cont {
+  line-height: 2;
+}
+
+.rules-cont h1 {
+  text-align: center;
+}
+
+.rules-cont table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+/* REGISTRATION CSS */
+
+.reg-cont-wrap {
+  padding: 16px;
+  background-color: grey;
+}
+
+input[type=text], input[type=date], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* input[type=radio] {
+
+} */
+
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.submit {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.submit:hover {
+  opacity: 1;
+}
+
+/* USERS CSS */
+
+.reg-users-wrap {
+  padding-bottom: 5rem;
+}
+
+.reg-users-wrap h1 {
+  margin-bottom: 4rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 90px;
+}
+
+.user-list ul li {
+  text-align: center;
+}
+
+.user-list-nicks {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 659px) {
+  .site-header__end {
+    padding-right: 4rem;
+  }
+
+  .tab-content {
+    padding: 2rem 0;
+  }
+
+  .rules-cont table {
+    font-size: .7rem;
+  }
+
+  .user-list {
+    grid-template-columns: auto auto;
+    gap: 40px;
+  }
+}
